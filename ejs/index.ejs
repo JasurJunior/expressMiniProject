@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title><%= title %></title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/Backend_developer">For me</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link <% if (active == 'home') {%> active fs-2<% } %>" href="/">Home</a>
+          <a class="nav-link <% if (active == 'Features') {%> active fs-2<% } %>" href="/Features">Features</a>
+          <a class="nav-link <% if (active == 'Pricing') {%> active fs-2<% } %>" href="/Pricing">Pricing</a>
+          <a class="nav-link <% if (active == 'Disabled') {%> active fs-2<% } %>" href="/Disabled" >Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1><%= title %></h1>
+    <% if ( title == 'Backend_developer') {%>
+      <div class="card" style="width: 18rem;">
+        <img src="https://st4.depositphotos.com/12985790/20582/i/1600/depositphotos_205824906-stock-photo-handsome-man-white-shirt-looking.jpg" class="card-img-top" alt="foto for me">
+        <div class="card-body">
+          <h5 class="card-title">Me</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="/more" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>
